@@ -20,7 +20,7 @@ public class SongController {
     public ResponseEntity createSong(@RequestBody Song song) throws URISyntaxException {
         Song savedSong = songRepository.save(song);
         return ResponseEntity.ok()
-                .location(new URI("/garcia/songs/" + savedSong.getId()))
+                .location(new URI("/yabut/songs/" + savedSong.getId()))
                 .body(savedSong);
     }
 
